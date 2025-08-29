@@ -5,7 +5,8 @@ const {GoogleGenerativeAI} = require("@google/generative-ai");
 // const runOneShot = require("./prompts/oneShot.js");
 // const runMultiShot = require("./prompts/multiShot.js");
 // const runDynamic = require("./prompts/dynamic.js");
-const runChainOfThought = require("./prompts/chainOfThoughts.js");
+// const runChainOfThought = require("./prompts/chainOfThoughts.js");
+const runTemperature = require("./prompts/temperature.js");
 
 
 
@@ -17,4 +18,5 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // runOneShot(genAI);
 // runMultiShot(genAI);
 // runDynamic(genAI, "Math", "Pythagorean Theorem")
-runChainOfThought(genAI)
+// runChainOfThought(genAI)
+runTemperature(genAI)
