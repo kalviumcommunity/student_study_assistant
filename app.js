@@ -4,7 +4,9 @@ const {GoogleGenerativeAI} = require("@google/generative-ai");
 // const runZeroShot = require("./prompts/zeroShot.js");
 // const runOneShot = require("./prompts/oneShot.js");
 // const runMultiShot = require("./prompts/multiShot.js");
-const runDynamic = require("./prompts/dynamic.js");
+// const runDynamic = require("./prompts/dynamic.js");
+const runChainOfThought = require("./prompts/chainOfThoughts.js");
+
 
 
 
@@ -14,4 +16,5 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // runZeroShot(genAI);
 // runOneShot(genAI);
 // runMultiShot(genAI);
-runDynamic(genAI, "Math", "Pythagorean Theorem")
+// runDynamic(genAI, "Math", "Pythagorean Theorem")
+runChainOfThought(genAI)
